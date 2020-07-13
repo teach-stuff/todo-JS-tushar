@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Todo list</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrapper">
+    <form>
+        <input type="text" class="todo-input" placeholder="Add item..." />
+        <button class="todo-button" type="submit">+</button>
+    </form>
+
+    <ul class="todo-list">
+        <li class="complete">
+            <button class="done">&#10003;</button>
+            <span>Buy apples</span>
+            <button class="delete">&#128465;</button>
+        </li>
+        <li>
+            <button class="done">&#10003;</button>
+            <span>Buy milk</span>
+            <button class="delete">&#128465;</button>
+        </li>
+        <li>
+            <button class="done">&#10003;</button>
+            <span>Buy eggs</span>
+            <button class="delete">&#128465;</button>
+        </li>
+    </ul>
+
+    <div class="actions">
+        <div class="left total">1 items remaining</div>
+        <div class="right">
+                <button class="delete-complete">Delete completed items</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
