@@ -12,8 +12,6 @@ addButton[0].addEventListener("click", function (event) {
     addTodoItem();
 });
 
-deleteAllCompleteButton[0].addEventListener('click',  deleteAllCompletedItems);
-
 for (let i = 0; i < checkCompleteButton.length; i++) {
     checkCompleteButton[i].addEventListener("click", function (event) {
         markComplete(event.target);
@@ -25,6 +23,9 @@ for (let i = 0; i < checkDeleteButton.length; i++) {
         markDelete(event.target);
     });
 }
+
+deleteAllCompleteButton[0].addEventListener('click',  deleteAllCompletedItems);
+updateItemsRemaining();
 
 //Add a new task
 function addTodoItem() {
@@ -95,10 +96,10 @@ function updateItemsRemaining() {
 
     if (allElements && completedElements) {
         const remaining = allElements.length - completedElements.length;
-        leftTotal.textContent = remaining + ' items remaining';
-        console.log(leftTotal.textContent);
+        leftTotal[0].textContent = remaining + ' items remaining';
+        console.log(leftTotal[0].textContent);
     } else {
-        leftTotal.textContent = '0 items remaining';
+        leftTotal[0].textContent = '0 items remaining';
     }
 }
 
